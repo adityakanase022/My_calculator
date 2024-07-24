@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <section id="calculator">
+
+        <form class="parent">
+            <div id="child_1" class="child">
+                <input type="text" name="oo" id="numbers_display" disabled>
+            </div>
+            <div id="child_2" class="child">
+                <div class="rows">
+                    <input type="button" value="AC" name="operation" id="all_clear" onclick="oo.value = ''">
+                    <input type="button" value="DEL" name="operation" id="delete"
+                        onclick="oo.value = oo.value.substr(0,(oo.value.length-1)) ">
+                    <input type="button" value="%" name="opration" id="modulo" onclick="oo.value += '%'"
+                        class="operate">
+                    <input type="button" value="/" name="opration" id="divide" onclick="oo.value +='/' "
+                        class="operate">
+                </div>
+                <div class="rows">
+                    <input type="button" value="9" name="number" onclick="oo.value += '9' " class="numbers">
+                    <input type="button" value="8" name="number" onclick="oo.value += '8'" class="numbers">
+                    <input type="button" value="7" name="number" onclick="oo.value += '7'" class="numbers">
+                    <input type="button" value="*" name="opration" id="multiply" onclick="oo.value += '*'"
+                        class="operate">
+                </div>
+                <div class="rows">
+                    <input type="button" value="4" name="number" onclick="oo.value += '4'" class="numbers">
+                    <input type="button" value="5" name="number" onclick="oo.value += '5'" class="numbers">
+                    <input type="button" value="6" name="number" onclick="oo.value += '6'" class="numbers">
+                    <input type="button" value="-" name="opration" id="substract" onclick="oo.value += '-'"
+                        class="operate">
+                </div>
+                <div class="rows">
+                    <input type="button" value="1" name="number" id="" onclick="oo.value += '1'" class="numbers">
+                    <input type="button" value="2" name="number" id="" onclick="oo.value += '2'" class="numbers">
+                    <input type="button" value="3" name="number" id="" onclick="oo.value += '3'" class="numbers">
+                    <input type="button" value="+" name="opration" id="addition" onclick="oo.value += '+'"
+                        class="operate">
+                </div>
+                <div class="rows">
+                    <input type="button" value="0" name="number" id="" onclick="oo.value += '0'" class="numbers">
+                    <input type="button" value="00" name="number" id="two_zeros" onclick="oo.value += '00'"
+                        class="numbers">
+                    <input type="button" value="." name="opration" id="dotts" onclick="oo.value += '.'" class="operate">
+                    <input type="button" value="=" name="opration" id="equal_to" onclick="oo.value =eval(oo.value)">
+                </div>
+            </div>
+        </form>
+
+
+    </section>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
